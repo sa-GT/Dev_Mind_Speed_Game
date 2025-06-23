@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dev_Mind_Speed_Game.Server", "Dev_Mind_Speed_Game.Server\Dev_Mind_Speed_Game.Server.csproj", "{A8A0BE08-E1C1-493C-B2EA-8E4B47D49453}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "dev_mind_speed_game.client", "dev_mind_speed_game.client\dev_mind_speed_game.client.esproj", "{83E0993D-D187-49C3-9FC0-0F91F0333034}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A8A0BE08-E1C1-493C-B2EA-8E4B47D49453}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8A0BE08-E1C1-493C-B2EA-8E4B47D49453}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8A0BE08-E1C1-493C-B2EA-8E4B47D49453}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8A0BE08-E1C1-493C-B2EA-8E4B47D49453}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83E0993D-D187-49C3-9FC0-0F91F0333034}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83E0993D-D187-49C3-9FC0-0F91F0333034}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83E0993D-D187-49C3-9FC0-0F91F0333034}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{83E0993D-D187-49C3-9FC0-0F91F0333034}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83E0993D-D187-49C3-9FC0-0F91F0333034}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83E0993D-D187-49C3-9FC0-0F91F0333034}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
