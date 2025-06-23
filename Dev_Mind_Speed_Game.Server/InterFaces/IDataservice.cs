@@ -9,5 +9,6 @@ namespace Dev_Mind_Speed_Game.Server.InterFaces
 		public bool StartGame([FromBody] StartGameDTO1 dto);
 		public bool SubmitAnswer([FromBody] SubmitAnswerDTO dto);
 		public GetCurrentQuestionDTO? GetQuestionInfo();
+		public GameResultDTO EndGame(int gameId);
 	}
 }

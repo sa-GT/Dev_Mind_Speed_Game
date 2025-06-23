@@ -41,5 +41,15 @@ namespace Dev_Mind_Speed_Game.Server.Controllers
 			}
 			return NotFound("Question not found for the given game ID");
 		}
+		[HttpGet("game/{gameId}/end")]
+		public IActionResult EndGame(int gameId)
+		{
+			var result = _dataService.EndGame(gameId);
+			if (result == null)
+				return NotFound("Game not found or already ended");
+
+			return Ok(result);
+		}
+
 	}
 }

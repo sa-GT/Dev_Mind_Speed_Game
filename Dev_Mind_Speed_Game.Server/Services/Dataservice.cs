@@ -145,6 +145,42 @@ namespace Dev_Mind_Speed_Game.Server.Services
 				GameId = question.GameId
 			};
 		}
+		public GameResultDTO EndGame(int gameId)
+		{
+			var game = _context.Games.FirstOrDefault(g => g.Id == gameId);
+
+			game.IsEnded = true;
+			_context.Update(game);
+
+			var questions = _context.Questions
+				.Where(q => q.GameId == gameId && q.TimeTaken != null)
+				.ToList();
+
+			int totalQuestions = questions.Count;
+			int correctAnswers = questions.Count(q => q.PlayerAnswer == q.CorrectAnswer);
+			double totalTime = questions.Sum(q => q.TimeTaken ?? 0);
+			var fastest = questions.OrderBy(q => q.TimeTaken).FirstOrDefault();
+
+			var result = new GameResult
+			{
+				GameId = gameId,
+				Score = (int)((correctAnswers / totalQuestions) * 100),
+				FastestQuestionId = fastest?.Id,
+				TotalTime = totalTime
+			};
+			_context.GameResults.Add(result);
+			_context.SaveChanges();
+
+			return new GameResultDTO
+			{
+				Name = game.PlayerName,
+				Difficulty = game.Difficulty,
+				CurrentScore = $"{correctAnswers}/{totalQuestions}",
+				TotalTimeSpent = totalTime,
+				BestScore = fastest?.TimeTaken ?? 0
+			};
+		}
+
 
 	}
 }
